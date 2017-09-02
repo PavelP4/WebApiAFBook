@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html>
+<html ng-app="HelloApp">
 <head>
     <title></title>
 	<meta charset="utf-8" />
@@ -7,6 +7,10 @@
     <script src="Scripts/App/App.js"></script>
 </head>
 <body>
-    <h1>Hello!</h1>
+    <div ng-controller="helloController as hc">
+        <h1>Hello {{hc.name}}!</h1>
+
+    </div>
+    
 </body>
 </html>
