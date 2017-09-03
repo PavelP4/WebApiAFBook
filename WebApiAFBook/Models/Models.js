@@ -1,28 +1,22 @@
-//var model = {
-//    user: "Adam",
-//    items: [{ action: "Buy Flowers", done: false },
-//        { action: "Get Shoes", done: false },
-//        { action: "Collect Tickets", done: true },
-//        { action: "Call Joe", done: false }]
-//};
 "use strict";
 var Model = (function () {
     function Model() {
         this.user = "Adam";
         this.items = [
-            new ModelItem("Buy Flowers", false),
-            new ModelItem("Get Shoes", false),
-            new ModelItem("Collect Tickets", false),
-            new ModelItem("Call Joe", false)
+            new ToDoItem("Buy Flowers", false),
+            new ToDoItem("Get Shoes", false),
+            new ToDoItem("Collect Tickets", false),
+            new ToDoItem("Call Joe", false)
         ];
     }
     return Model;
 }());
 exports.Model = Model;
-var ModelItem = (function () {
-    function ModelItem(action, done) {
+var ToDoItem = (function () {
+    function ToDoItem(action, done) {
         this.action = action;
         this.done = done;
     }
-    return ModelItem;
+    return ToDoItem;
 }());
+exports.ToDoItem = ToDoItem;

@@ -6802,7 +6802,7 @@
     <Content Include="node_modules\zone.js\dist\zone.js" />
     <Content Include="node_modules\zone.js\dist\zone.min.js" />
     <Content Include="Scripts\App\App.js" />
-    <Content Include="Templates\Header.html" />
+    <Content Include="Templates\app.component.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -11715,7 +11715,7 @@
     <TypeScriptCompile Include="node_modules\zone.js\lib\zone-spec\task-tracking.ts" />
     <TypeScriptCompile Include="node_modules\zone.js\lib\zone-spec\wtf.ts" />
     <TypeScriptCompile Include="node_modules\zone.js\lib\zone.ts" />
-    <TypeScriptCompile Include="Templates\Header.ts" />
+    <TypeScriptCompile Include="Templates\app.component.ts" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />

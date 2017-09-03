@@ -9,20 +9,29 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var platform_browser_1 = require("@angular/platform-browser");
-var forms_1 = require("@angular/forms");
-var Header_1 = require("./../Templates/Header");
-var App = (function () {
-    function App() {
+var Models_1 = require("./../Models/Models");
+var AppComponent = (function () {
+    function AppComponent() {
+        this.model = new Models_1.Model();
     }
-    App = __decorate([
-        core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, forms_1.FormsModule],
-            declarations: [Header_1.HeaderComponent],
-            bootstrap: [Header_1.HeaderComponent]
+    AppComponent.prototype.getName = function () {
+        return this.model.user;
+    };
+    AppComponent.prototype.getTodoItems = function () {
+        return this.model.items.filter(function (item) { return !item.done; });
+    };
+    AppComponent.prototype.addItem = function (newItem) {
+        if (newItem != "") {
+            this.model.items.push(new Models_1.ToDoItem(newItem, false));
+        }
+    };
+    AppComponent = __decorate([
+        core_1.Component({
+            selector: "app-component",
+            templateUrl: "Templates/app.component.html"
         }), 
         __metadata('design:paramtypes', [])
-    ], App);
-    return App;
+    ], AppComponent);
+    return AppComponent;
 }());
-exports.App = App;
+exports.AppComponent = AppComponent;

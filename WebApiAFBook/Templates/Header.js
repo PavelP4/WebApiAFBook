@@ -10,20 +10,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var Models_1 = require("./../Models/Models");
-var HeaderComponent = (function () {
-    function HeaderComponent() {
+var AppComponent = (function () {
+    function AppComponent() {
         this.model = new Models_1.Model();
     }
-    HeaderComponent.prototype.getName = function () {
+    AppComponent.prototype.getName = function () {
         return this.model.user;
     };
-    HeaderComponent = __decorate([
+    AppComponent.prototype.getTodoItems = function () {
+        return this.model.items;
+    };
+    AppComponent = __decorate([
         core_1.Component({
-            selector: "app-header",
-            templateUrl: "Templates/Header.html"
+            selector: "app-component",
+            templateUrl: "Templates/app.component.html"
         }), 
         __metadata('design:paramtypes', [])
-    ], HeaderComponent);
-    return HeaderComponent;
+    ], AppComponent);
+    return AppComponent;
 }());
-exports.HeaderComponent = HeaderComponent;
+exports.AppComponent = AppComponent;
