@@ -1,7 +1,7 @@
-﻿var app = angular.module("HelloApp", []);
+﻿//var app = angular.module("HelloApp", []);
 
-var helloController = function () {
-    this.name = "G5";
-};
+//var helloController = function () {
+//    this.name = "G5";
+//};
 
-app.controller("helloController", helloController);
+//app.controller("helloController", helloController);
